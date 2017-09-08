@@ -1,0 +1,35 @@
+body {
+	background: #6D1A1B;
+}
+
+div.songbook-play-button a {
+	color: #6D1A1B;
+}
+
+div.songbook-play-button a.play {
+	background: url('https://henrique7cordas.github.io/songbooks.samba7vol2/images/play-icon-big.png') no-repeat 24px center;
+	background-color: #fff;
+}
+
+div.songbook-play-button a.pause {
+	background: url('https://henrique7cordas.github.io/songbooks.samba7vol2/images/pause-icon-big.png') no-repeat 24px center;
+	background-color: #fff;
+}
+
+
+div.book-footer {
+	background: #6D1A1B;
+}
+
+ul.songbook-music-part-list li.selected {
+	color: #6D1A1B;
+}
+
+div.samba7-menu {
+	background-color: #4F1314;
+	background: rgba(76,18,19, 0.9);
+}
+
+div.window-title-bar {
+	background-color: #2C0A0B !important;
+}
