@@ -33,6 +33,7 @@
 						SongBookWindowControls.build();
 					} else {
 						window.songbook = new SongBook(window.SONGBOOK_CONFIG);
+						window.songbook.createPlayer("yt-player");
 						SongBookWindowControls.build();
 						jQuery("body").addClass("complete");
 					}
