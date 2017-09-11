@@ -26,14 +26,14 @@
 			function onYouTubeIframeAPIReady() {
 
 				jQuery(window).ready(function(){
+					SongBookWindowControls.build();
 					if(window.SONGBOOK_CONFIG==undefined) {
-						alert("Erro ao configurar o songbook! Erro 0x001");
+						jQuery("div.permission-error").show();
 					}
 
 					window.songbook = new SongBook(window.SONGBOOK_CONFIG);
 					window.songbook.createPlayer("yt-player");
 					jQuery("body").addClass("complete");
-					SongBookWindowControls.build();
 				});
 
 			};
@@ -41,6 +41,7 @@
 		<script src="https://www.youtube.com/iframe_api"></script>
 	</head>
 	<body>
+		<div class="login-dialog"><span>Efetue o login na sua conta google para continuar:</span></div>
 		<div class="window-title-bar">
 			<div class="draggable-area">
 				<div class="title-label">
@@ -53,6 +54,9 @@
 					<a href="#" class="button close"></a>
 				</div>
 			</div>
+		</div>
+		<div class="permission-error">
+			<span>Erro: Você não possui permissões para acessar este songbook. (Erro 0x001)</span>
 		</div>
 		<div class="book-contents smb7-songbook">
 			<div class="samba7-header">

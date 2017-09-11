@@ -27,14 +27,14 @@
 			}
 
 			jQuery(window).ready(function(){
+				SongBookWindowControls.build();
 				if(window.SONGBOOK_CONFIG==undefined) {
-					alert("Erro ao configurar o songbook! Erro 0x001");
+					jQuery("div.permission-error").show();
 				}
 
 				window.songbook = new SongBook(window.SONGBOOK_CONFIG);
 				jQuery("body").addClass("complete");
 				SongBookHome.populateSongBookInfo();
-				SongBookWindowControls.build();
 			});
 		</script>
 	</head>
@@ -52,6 +52,9 @@
 					<a href="#" class="button close"></a>
 				</div>
 			</div>
+		</div>
+		<div class="permission-error">
+			<span>Erro: Você não possui permissões para acessar este songbook. (Erro 0x001)</span>
 		</div>
 
 		<div class="samba7-home-header">
