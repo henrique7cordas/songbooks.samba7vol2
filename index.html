@@ -31,12 +31,13 @@
 					jQuery("div.permission-error").show();
 					jQuery("body").addClass("complete");
 					window.songbook={getParameterByName:function(){return "";}}
+					SongBookWindowControls.build();
+				} else {
+					window.songbook = new SongBook(window.SONGBOOK_CONFIG);
+					SongBookWindowControls.build();
+					jQuery("body").addClass("complete");
+					SongBookHome.populateSongBookInfo();
 				}
-
-				SongBookWindowControls.build();
-				window.songbook = new SongBook(window.SONGBOOK_CONFIG);
-				jQuery("body").addClass("complete");
-				SongBookHome.populateSongBookInfo();
 			});
 		</script>
 	</head>
