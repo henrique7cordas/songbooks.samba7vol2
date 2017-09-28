@@ -2,18 +2,12 @@ body {
 	background: #6D1A1B;
 }
 
-div.songbook-play-button a {
+div.songbook-play-button a.play {
 	color: #6D1A1B;
 }
 
-div.songbook-play-button a.play {
-	background: url('https://henrique7cordas.github.io/songbooks.samba7vol2/images/play-icon-big.png') no-repeat 24px center;
-	background-color: #fff;
-}
-
-div.songbook-play-button a.pause {
-	background: url('https://henrique7cordas.github.io/songbooks.samba7vol2/images/pause-icon-big.png') no-repeat 24px center;
-	background-color: #fff;
+div.songbook-play-button a.play span.symbol {
+	border-color: transparent transparent transparent #6D1A1B;
 }
 
 
